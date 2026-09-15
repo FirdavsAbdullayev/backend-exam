@@ -10,10 +10,8 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-// Swagger UI dokumentatsiyasi
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-// Asosiy router
 app.use('/api', mainRouter);
 
 const startServer = async () => {
